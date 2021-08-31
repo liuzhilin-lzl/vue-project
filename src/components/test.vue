@@ -1,7 +1,6 @@
 <template>
 	<div>
 		测试git
-		
 		一脸闷逼
 	</div>
 </template>
