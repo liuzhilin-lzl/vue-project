@@ -1,5 +1,5 @@
 <template>
-	<div></div>
+	<div>测试git</div>
 </template>
 <script>
 export default {
