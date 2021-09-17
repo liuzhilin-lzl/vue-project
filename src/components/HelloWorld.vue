@@ -13,7 +13,7 @@
 	</div>
 </template>
 <script>
-import reqwest from 'reqwest';
+import reqwest from 'reqwest'; 
 import infiniteScroll from 'vue-infinite-scroll';
 const fakeDataUrl =
 	'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
