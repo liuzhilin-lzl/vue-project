@@ -1,8 +1,6 @@
 <template>
 	<div>
-		master更改
-		冲突git发发的
-		api测试
+		测试Merge
 	</div>
 </template>
 <script>
