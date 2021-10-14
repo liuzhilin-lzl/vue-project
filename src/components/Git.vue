@@ -1,16 +1,12 @@
 <template>
 	<div>
-		master更改
-		冲突git发发的
-		api测试
+		git <i class="ion-merge"></i>
+		怎么回事
 	</div>
 </template>
 <script>
-export default {
-	
-}
+export default {};
 </script>
 <style scoped>
-
 </style>>
 	
