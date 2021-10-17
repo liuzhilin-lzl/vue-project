@@ -20,6 +20,7 @@ const fakeDataUrl =
 const columns = [
 	{
 		title: 'Name',
+		DSAFDK  
 		dataIndex: 'name',
 		sorter: true,
 		width: '20%',
