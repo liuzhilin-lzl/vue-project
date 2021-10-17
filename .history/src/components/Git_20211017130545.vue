@@ -7,10 +7,7 @@
  * @FilePath: /vue-project/src/components/Git.vue
 -->
 <template>
-	<div>测试Merge git 怎么回事
-		设么情况
-
-	</div>
+	<div>测试Merge git 怎么回事</div>
 </template>
 <script>
 export default {};

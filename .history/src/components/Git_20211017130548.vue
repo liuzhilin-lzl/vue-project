@@ -8,8 +8,7 @@
 -->
 <template>
 	<div>测试Merge git 怎么回事
-		设么情况
-
+		
 	</div>
 </template>
 <script>
