@@ -1,0 +1,12 @@
+[
+  {
+      "request":
+      {
+          "uri":"/hello"
+      },
+      "response":
+      {
+          "text":"world"
+      }
+  }
+]

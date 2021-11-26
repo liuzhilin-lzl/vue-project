@@ -1,0 +1,15 @@
+<template>
+  <div class="tinymce-editor">
+    <editor
+      v-model="myValue"
+      :init="init"
+    ></editor>
+  </div>
+</template>
+<script>
+	export default {
+		components: {
+	    	Editor
+  		},
+	}
+</script>
