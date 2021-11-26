@@ -2,11 +2,7 @@
 <template>
 	<div class="div">
 		master 使用rebase
-		<div>
-			<div>
-				<div>di</div>
-			</div>
-		</div>
+		<a href="">什么</a>
 	</div>
 </template>
 <script>
