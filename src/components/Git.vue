@@ -2,6 +2,7 @@
 <template>
 	<div class="div">
 		<p>测试rebase</p>
+		<p>rebase什么情况</p>
 	</div>
 </template>
 <script>
