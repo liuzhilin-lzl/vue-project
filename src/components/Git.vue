@@ -2,11 +2,7 @@
 <template>
 	<div class="div">
 		master 使用rebase
-		<div>
-			<div>
-				<div>di</div>
-			</div>
-		</div>
+		<p>master git rebase</p>
 	</div>
 </template>
 <script>
