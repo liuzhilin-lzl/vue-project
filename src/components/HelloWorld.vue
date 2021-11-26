@@ -10,16 +10,24 @@
 				<a-spin />
 			</div>
 		</a-table>
+		<a-table></a-table>
+
+		<a-cascader
+			:options="options"
+			titlename="titleName"
+			placeholder="Please select"
+			@change="onChange"
+		/>
 	</div>
 </template>
 <script>
-import reqwest from 'reqwest'; 
+import reqwest from 'reqwest';
 import infiniteScroll from 'vue-infinite-scroll';
 const fakeDataUrl =
 	'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
 const columns = [
 	{
-		title: 'Name',
+		titlename: 'Name',
 		dataIndex: 'name',
 		sorter: true,
 		width: '20%',
@@ -43,10 +51,45 @@ export default {
 	directives: { infiniteScroll },
 	data() {
 		return {
+			titile: '',
 			data: [],
 			loading: false,
 			busy: false,
 			columns,
+			options: [
+				{
+					value: 'zhejiang',
+					label: 'Zhejiang',
+					children: [
+						{
+							value: 'hangzhou',
+							label: 'Hangzhou',
+							children: [
+								{
+									value: 'xihu',
+									label: 'West Lake',
+								},
+							],
+						},
+					],
+				},
+				{
+					value: 'jiangsu',
+					label: 'Jiangsu',
+					children: [
+						{
+							value: 'nanjing',
+							label: 'Nanjing',
+							children: [
+								{
+									value: 'zhonghuamen',
+									label: 'Zhong Hua Men',
+								},
+							],
+						},
+					],
+				},
+			],
 		};
 	},
 	beforeMount() {
@@ -80,6 +123,9 @@ export default {
 				this.loading = false;
 			});
 		},
+		onChange(value) {
+			console.log(value);
+		},
 	},
 };
 </script>
@@ -93,6 +139,7 @@ export default {
 }
 .demo-loading-container {
 	position: absolute;
+	color: aqua;
 	bottom: 40px;
 	width: 100%;
 	text-align: center;

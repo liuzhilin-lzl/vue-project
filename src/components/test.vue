@@ -14,7 +14,6 @@
 						src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
 					/>
 				</a-list-item-meta>
-				<div>测试rebaseContent</div>
 			</a-list-item>
 			<div v-if="loading && !busy" class="demo-loading-container">
 				<a-spin />
