@@ -1,8 +1,9 @@
 
 <template>
 	<div class="div">
-		master 使用rebase
-		<p>master git rebase</p>
+		<div>
+			最后一次测试rebase
+		</div>
 	</div>
 </template>
 <script>
