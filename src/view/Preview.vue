@@ -8,16 +8,6 @@
 -->
 <template>
 	<div>
-		<!-- <h1>通过npm npm i -s area-data</h1> -->
-		<!-- <al-cascader v-model="resArr" level="3" data-type="all" size="large" @input="selectArea" />
-		<h1>通过 json</h1>
-		<Cascader @change="selectArea1" :default-value="defaultArea" />
-		<Cascader2 @change="selectArea1" :default-value="defaultArea" />
-		<el-button @click="dialogVisible = true">测试</el-button>
-		<el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
-			<TinymceModal class="component"></TinymceModal>
-		</el-dialog> -->
-		<!-- <TinymceModal class="component"></TinymceModal> -->
 		<CheckBoxModal v-model="checkValue"></CheckBoxModal>
 		<div>
 			model方式双向绑定
@@ -26,28 +16,29 @@
 		<div>
 		.sync 修饰符双向绑定
 		</div>
-		<inputModal :changeValue.sync='changeText' v-model="changeValue"></inputModal>
+		<inputSyncModal :childText.sync='changeText'></inputSyncModal>
 		<el-button type="primary" @click="onClick">测试</el-button>
+		<datePicker v-model="date"></datePicker>
+
+		<baseInput size="small" @input="inputText" id="inputId" placeholder="爱一人白首" style="border: 1px solid #ff0000" class="input-sm"></baseInput>
 	</div>
 </template>
 <script>
-// import AlCascader from '../components/Cascader.vue';
-// import Cascader from '@/components/cascader/Cascader.vue';
-// import Cascader2 from '@/components/cascader/ant-design-vue';
-// import TinymceModal from '@/components/tinymceModal/TinymceModal';
 import CheckBoxModal from '@/components/selectModal/checkBoxModal';
 import inputModal from '@/components/selectModal/InputModal';
+import inputSyncModal from '@/components/selectModal/inputSyncModal';
+import datePicker from '@/components/selectModal/datePicker';
+import baseInput from '@/components/inputModal/index';
 
 export default {
 	name: 'App',
 	mixins: [inputModal, CheckBoxModal],
 	components: {
-		// AlCascader,
-		// Cascader,
-		// Cascader2,
-		// TinymceModal,
+		baseInput,
 		CheckBoxModal,
-		inputModal
+		inputSyncModal,
+		inputModal,
+		datePicker
 	},
 	data() {
 		return {
@@ -55,9 +46,10 @@ export default {
 			defaultArea: '',
 			dialogVisible: false,
 			checkValue: '',
-			text: '',
+			text: 'model',
 			changeValue: '',
-			changeText: ''
+			changeText: 'sync',
+			date: ''
 		};
 	},
 	mounted() {
@@ -67,6 +59,9 @@ export default {
 		this.test()
 	},
 	methods: {
+		inputText() {
+			console.log('111');
+		},
 		selectArea() {
 			console.log(this.resArr);
 		},
@@ -75,9 +70,10 @@ export default {
 		},
 		onClick() {
 			//model
-			console.log(this.text);
+			console.log('model', this.text);
 			//.sync
-			console.log(this.changeText);
+			console.log('.sync', this.changeText);
+			console.log('date', this.date);
 		}
 	},
 };

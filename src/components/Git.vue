@@ -3,6 +3,7 @@
 	<div class="div">
 		<p>测试rebase</p>
 		<p>还是有问题</p>
+		<p>rebase什么情况</p>
 	</div>
 </template>
 <script>
