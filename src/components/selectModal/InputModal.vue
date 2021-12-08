@@ -11,9 +11,6 @@
   <div>
     <!-- model 双向绑定 -->
     <el-input size="small" :value="defaultValue" @input="updateVal"></el-input>
-    <!-- .sync 修饰符双向绑定 -->
-    <el-input size="small" v-model="value"></el-input>
-    <el-button type="primary" @click="submitVal">提交</el-button>
   </div>
 </template>
 <script>
@@ -29,19 +26,12 @@ export default {
     }
   },
   data() {
-    return {
-      value: '',
-      testValue: 'aa'
-    };
+    return {};
   },
   methods: {
     // model方式双向绑定
     updateVal(val) {
       this.$emit('changeValue', val)
-    },
-    // .sync 修饰符双向绑定
-    submitVal() {
-      this.$emit('update:changeValue', this.value)
     }
   }
 };
